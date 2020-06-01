@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<form action='/todos' method='POST'> <!-- action means my form will submit to this url ns POST means my daata will go as a post request -->
+		<input name = 'newtodo'>
+		<input type = 'submit'>
+	</form>
+	<ul>
+		{{#each todos as |todo|}}
+		<li>{{todo.task}}</li>
+		{{/each}}
+
+
+</body>
+</html>
