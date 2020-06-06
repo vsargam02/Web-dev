@@ -1,0 +1,42 @@
+#windowa
+
+start the MySQL service (from task manager)
+
+
+
+## Log in to MYSQL as root
+
+without root password-
+'''shell
+mysql -u root
+mysql>
+
+with root password-
+'''shell
+mysql -u root -p
+enter passwrord:
+
+mysql>
+
+## Create DB,User ,Grant access
+
+''sql
+CREATE DATABASE mytestdb;
+
+CREATE USER myuser IDENTIFIED BY 'mypass';
+
+USE mytestdb;
+
+GRANT ALL PRIVILEGES ON mytestdb.* TO myuser;
+
+FLUSH PRIVILEGES;
+''''
+
+
+## login using a new user
+
+''shell
+mysql -u myuser -p
+enter password :(enter 'mypass' here)
+
+mysql>
